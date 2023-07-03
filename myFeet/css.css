@@ -1,0 +1,907 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Passion+One&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Gruppo&family=Passion+One&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bruno+Ace&family=Gruppo&family=Passion+One&family=Poppins:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: neue,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	overflow-x: hidden;
+	background: rgb(245, 245, 245);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	background: rgba(245,245,245, 0.899);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
+	z-index: 99;
+	backdrop-filter:blur(20px);
+
+}
+
+.logo {
+	margin-top: 12px;
+	width: 150px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.logo a {
+	font-family: 'Bruno' sans-serif;
+	color: black;
+	font-weight: 900;
+	text-decoration: none;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+.nav {
+	margin-bottom: -13px;
+}
+
+.navegacao_site {
+	position: relative;
+	font-size: 1.1em;
+	color: grey;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;
+}
+
+.navegacao_site::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 3px;
+	background-color: grey;
+	border-radius: 5px;
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform .2s;
+}
+
+.navegacao_site:hover::after {
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
+.nav span {
+	position: relative;
+	font-size: 1.1em;
+	color: grey;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;
+	margin-right: 26px;
+}
+
+
+
+.botao_usuario {
+	border: none;
+	background: transparent;
+	position: absolute;
+	margin-top: -3px;
+	cursor: pointer;
+	transition: 0.38s;
+	transform: scale(1.2);
+}
+
+.botao_usuario:hover {
+	transform: scale(1.252);
+}
+
+.botao_usuario img {
+	width: 25px;
+	margin-left: 15px;
+}
+
+.menu_login {
+	display: none;
+}
+
+.open {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	/*padding-bottom: 1rem;*/
+	position: absolute;
+	/*background: rgba(54,54,54, 0.8);*/
+	border-radius: 10px;
+	color: #fff;
+	margin-top: 30px;
+	/*padding-left: 10px;
+	padding-right: 10px;*/
+	/*border: 2px solid rgba(0, 0, 0, 0.1);*/
+}
+
+.open .ola_usuario {
+	text-decoration: none;
+	color:white;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.caixa_ola_usuario {
+	width: 100%;
+	margin-bottom: -2px;
+	margin-right: -80px;
+	margin-left: -18px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.caixa_ola_usuario a {
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.caixa_ola_usuario button {
+	font-family: 'Poppins', sans-serif;
+	background: rgba(50,50,50, 0.85);
+	border:none;
+	outline: none;
+	width: 100%;
+	margin: 5px 10px;
+	margin-left: 1px;
+	color: white;
+	font-weight: 500;
+	height: 45px;
+	border-radius: 7px;
+	font-size: 16px;
+	transition: .33s;
+}
+
+.open .navegacao_usuario {
+	text-decoration: none;
+	color:white;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.open .navegacao_usuario:hover {
+	text-decoration: underline;
+}
+
+.menu_login .menu_item {
+	display: block;
+	/*padding-top: 15px;*/
+	height: 100%;
+	width: 190px;
+}
+
+.link_login {
+	width: 100%;
+	margin-bottom: -2px;
+	margin-right: -80px;
+	margin-left: -18px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.link_login a {
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.link_login button {
+	font-family: 'Poppins', sans-serif;
+	background: rgba(50,50,50, 0.85);
+	border:none;
+	outline: none;
+	width: 100%;
+	margin: 5px 10px;
+	margin-left: 1px;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	height: 45px;
+	border-radius: 7px;
+	font-size: 16px;
+	transition: .33s;
+}
+
+.link_login button:hover {
+	background: rgba(40,40,40, 1);
+	
+}
+
+.link_login #botao_sair:hover {
+	background-color: red;
+}
+
+main {
+    flex: 1 0 auto;
+    text-align: center;
+    margin-top: 10pc;
+}
+
+.conteudo {
+	height: auto;
+	margin: 1pc 0 10pc 0;
+	width: 100%;
+}
+
+.section_tenis {
+	margin: 1pc 0 4.5pc 0;
+	position: all;
+	font-size: 16.5px;
+}
+
+.section_tenis a {
+	text-decoration: none;
+	color: rgba(0,0,0, 0.8);
+	font-weight: 800;
+	margin-left: 40px;
+	margin-right: 40px;
+	position: relative;
+}
+
+.section_tenis a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -13px;
+	width: 100%;
+	height: 2.3px;
+	background-color: black;
+	border-radius: 5px;
+	transform: scaleX(0);
+	transition: 50ms;
+}
+
+.section_tenis a:hover::after {
+	transform: scaleX(1);
+}
+
+
+.conteudo li {
+	display: inline-block;
+	margin: 40px 5pc;
+}
+
+.tenis {
+	display: inline-block;
+	transition: transform 0.5s;
+}
+
+.nome_tenis {
+	margin-top: -35px;
+	color: rgba(128,128,128, 0.78);
+	font-size: 1.200rem;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.preco_anterior {
+	text-decoration: line-through;
+	font-size: 14px;
+	color: rgba(128, 128, 128, 0.9);
+	margin-bottom: 1px;
+}
+
+.conteudo img {
+	width: 15pc;
+	border-radius: 8px;
+}
+
+.tenis:hover {
+	transform: scale(1.1);
+}
+
+
+footer {
+	width: 100%;
+	height: 10pc;
+	background-color: black;
+	flex-shrink: 0;
+	border-top: 2px solid rgba(0,0,0, 0.2);
+	padding: 50px;
+}
+
+.caixa_rodape {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.logo_rodape {
+	width: 10vh;
+	border-radius: 10px;
+	margin-right: 20pc;
+}
+
+.redes_sociais {
+	position: absolute;
+	margin-left: 20pc;
+	margin-top: 15px;
+	display: flex;
+}
+
+.redes_sociais span {
+	display: flex;
+	flex-direction: column;
+	width: 2em;
+	padding: 8px;
+	background: #fff;
+	border-radius: 10px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.copyright {
+	position: absolute;
+	margin-top: 20px;
+	color: white;
+}
+
+
+
+/*Pagina login */
+
+#body_usuario {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	font-family: 'Poppins', sans-serif;
+	position: absolute;
+	width: 400px;
+	height: 450px;
+	background: #1c1c1c;
+	/*background: linear-gradient(45deg, rgba(169,169,169, 0.19), rgba(220,220,220, 0.4));*/
+	border: 2px solid rgba(54,54,54);
+	border-radius: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0, .4);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.wrapper .caixa_login {
+	width: 100%;
+	padding: 40px;
+
+}
+
+.wrapper .icon_close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 45px;
+	height: 45px;
+	background: #363636;
+	font-size: 2em;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 20px;
+	cursor: pointer;
+	z-index: 1;
+	transition: .3s;
+
+}
+
+.icon_close:hover {
+	background: rgba(54,54,54, 0.91);
+}
+
+.wrapper h2 {
+	font-size: 2em;
+	color: #363636;
+	text-align: center;
+	color: #fcfcfc;
+	letter-spacing: 0.02em;
+}
+
+.campos {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #fff;
+	margin: 30px 0;
+
+}
+
+.campos label {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	font-size: 1em;
+	color: #363636;
+	font-weight: 500;
+	pointer-events: none;
+	transition: .5s;
+	color: white;
+
+}
+
+.campos input:focus~label,
+.campos input:valid~label {
+	top: -5px;
+}
+
+.campos input {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	color: #363636;
+	font-weight: 600;
+	padding: 0 35px 0 5px;
+	color:white;
+}
+
+.campos .icon {
+	position: absolute;
+	right: 8px;
+	font-size: 1.2em;
+	line-height: 57px;
+	color: white;
+}
+
+.lembrar {
+	font-size: .9em;
+	font-weight: 500;
+	margin: -15px 0 15px;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+
+.lembrar label input {
+	accent-color: #ffffff;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.lembrar a {
+	color: white;
+	text-decoration: none;
+}
+
+.lembrar a:hover {
+	text-decoration: underline;
+}
+
+.botao_login {
+	width: 100%;
+	height: 45px;
+	border: none;
+	outline: none;
+	background: rgba(230,230,230, 1);
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1em;
+	color: black;
+	font-weight: 500;
+	transition: .3s;
+	font-weight: 600;
+	margin-top: 5px;
+}
+
+.botao_login:hover {
+	opacity: 0.84;
+}
+
+.botao_login:active {
+	background: #1c1c1c;
+	color: white;
+	border: 1px solid white;
+}
+
+.cadastra_link {
+	font-size: .88em;
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	margin: 25px 0 10px;
+}
+
+.cadastra_link p a {
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.cadastra_link p a:hover {
+	text-decoration: underline;
+}
+
+.caixa_text_login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 6px;
+}
+
+.caixa_text_login #text_login {
+	color: green;
+	font-weight: 600;
+}
+
+/*Pagina ADM*/
+.caixa_botao {
+	margin: 30px auto 8px auto;
+}
+
+.input_id {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	margin-top: -10px;
+	margin-bottom: 7px;
+	border-radius: 5px;
+	color: white;
+	font-weight: 600;
+	padding: 7px 10px;
+	background: rgba(54, 54, 54, 1);
+}
+
+#id_valido {
+	margin: 5px auto 20px auto;
+	color: red;
+	font-weight: 700;
+}
+
+
+.caixa_tabela {
+	height: auto;
+	margin: 1pc 0 10pc 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.tabela_clientes table {
+	background-color: #1c1c1c;
+	border-color: #1c1c1c;
+	padding: 2px;
+	border-radius: 10px;
+}
+
+
+
+.tabela_clientes table tr th {
+	color: white;
+	padding: 20px 15px;
+	border-radius: 1.5px;
+	border: 1px solid rgba(190,190,190, 0.1);
+	
+}
+
+.botao_tabela {
+	padding: 12px 28px;
+	cursor: pointer;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	transition: 0.2s;
+	border: 0.7px solid black;
+	margin-left: 10px;
+	color: white;
+	background: #1c1c1c;
+}
+
+.botao_tabela_excluir {
+	padding: 12px 28px;
+	cursor: pointer;
+	font-weight: 600;
+	color: white;
+	background: red;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	transition: transform 10s ease;
+	border: 0.2px solid black;
+	transform: scale(1);
+	margin-bottom: 15px;
+}
+
+.botao_tabela:hover {
+	background: rgba(60,60,60, 0.89);
+	transform: scale(1.0004);
+}
+
+.botao_tabela_excluir:hover {
+	background: rgba(255,0,0, .65);
+}
+
+.fundo_diferente {
+	background: rgba(64, 64, 64, 1);
+}
+
+/*Pagina altera cliente*/
+
+#botao_voltar {
+	padding: 7px 22px;
+	border-radius: 6px;
+	border: 0.2px solid black;
+	background-color: rgb(60,60,60, 1);
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.23s;
+	margin-right: 8px;
+	color: white;
+	transition: 0.3s;
+}
+
+#botao_voltar:hover {
+	background-color: rgb(60,60,60, 0.7);
+}
+
+.botao_salva {
+	padding: 12px 28px;
+	cursor: pointer;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	transition: 0.2s;
+	border: 0.2px solid black;
+	margin-right: 10px;
+	background: rgb(0, 170, 0);
+	color: white;
+
+}
+
+.botao_salva:hover {
+	background: rgb(0, 195, 0);
+}
+
+.caixa_texto_cliente {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	padding: 10px 10px;
+	border-radius: 5px;
+	background: rgba(200, 200, 200, 0.5);
+	color: white;
+	font-weight: 700;
+}
+
+#botao_buscar {
+	padding: 7px 18px;
+	border-radius: 6px;
+	border: 0.2px solid black;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.23s;
+	margin-left: 8px;
+}
+
+#botao_buscar:hover {
+	background: rgba(0,0,0, .2);
+}
+
+select {
+	outline: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 5px;
+	color: white;
+	font-weight: 600;
+	padding: 6px 9px;
+	background: rgba(54, 54, 54, 1);
+}
+
+
+/*Pagina de localizacao*/
+
+#titulo_localizacao {
+	font-size: 24px;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+}
+
+.texto {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	color: #1c1c1c;
+	font-size: 17px;
+	
+}
+
+.texto_box {
+	width: 1500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 15px auto;
+	border: 1px solid rgba(54, 54, 54, 0.04);
+	background: rgba(54, 54, 54, 0.025);
+	border-radius: 10px;
+	
+}
+
+/*Pagina de cada tenis*/
+
+.conteudo .img_tenis {
+	display: inline-block;
+}
+
+.conteudo .modelo {
+	width: 29pc;
+}
+
+.conteudo .sobre_tenis {
+	height: 100%;
+	display: inline-block;
+}
+
+.conteudo .sobre_tenis .header_tenis {
+	margin-bottom: 2pc;
+}
+
+.conteudo .header_tenis .titulo_tenis {
+	font-weight: bold;
+	font-size: 19px;
+	font-family: poppins;
+}
+
+.conteudo .header_tenis .avaliacoes p {
+	display: inline;
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 2px 3px;
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+.conteudo .header2_tenis {
+	text-align: left;
+}
+
+.conteudo .header2_tenis p, .conteudo .header2_tenis ion-icon {
+	margin: 12px auto;
+}
+
+.conteudo .main_tenis {
+	margin-bottom: 28pc;
+}
+
+.conteudo .caixa_tamanho {
+	text-align: left;
+
+}
+
+.conteudo .tamanho_tenis {
+	width: 230px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.conteudo .botao_compras {
+	margin-top: 70px;
+	margin-left: -10px;
+	position: absolute;
+}
+
+.conteudo .botao_compras input {
+	margin: 20px;
+	width: 350px;
+	padding: 23px;
+	border-radius: 55px;
+	background: black;
+	color: white;
+	font-weight: bold;
+	font-size: 0.91em;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.conteudo .botao_compras input:hover {
+	background: rgba(0,0,0, .8);
+}
+
+/*pagina usuario*/ 
+
+.info_pessoais {
+	display: flex;
+	justify-content: center;
+	
+}
+
+.divisao1, .divisao2 {
+	flex: 1;
+	max-width: 500px; 
+  	padding: 20px;
+	
+}
+
+.divisao1 {
+	background: rgba(0,0,0, .9);
+	color: white;
+	font-weight: bold;
+	width: 350px;
+	height: 500px;
+	border-radius: 20px 0 0 20px;
+}
+
+.divisao2 {
+	width: 350px;
+	height: 500px;
+	background: rgba(0,0,0, .75);
+	color: rgba(235,235,235, 1);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 0 20px 20px 0;
+}
+
+.campos_pessoais, .nome_campos_pessoais {
+	display: inline-block;
+	
+}
+
+.campos_pessoais {
+	padding: 10px 20px;
+	max-width: 300px;
+	min-width: 250px;
+	min-height: 40px;
+	margin-left: 70px;
+	color: rgba(0,0,0, .55);
+	font-weight: 600;
+}
+
+.nome_campos_pessoais {
+	font-weight: bold;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: 7px;
+}
+
+.caixa_campos {
+	background: rgba(0,0,0, .076);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px 1px;
+	margin: 15px auto;
+	border-radius: 20px;
+}
